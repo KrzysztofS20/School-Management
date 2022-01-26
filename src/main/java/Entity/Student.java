@@ -10,7 +10,7 @@ public class Student {
     private Double amountToPay;
     private Double alreadyPaid;
 
-    public Student(String firstName, String secondName, int personalIdentity, int yearOfStudy, int phoneNumber, String email, Double amountToPay, Double alreadyPaid) {
+    public Student(String firstName, String secondName, int personalIdentity, int yearOfStudy, int phoneNumber, String email, Double amountToPay) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.personalIdentity = personalIdentity;
@@ -18,7 +18,7 @@ public class Student {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.amountToPay = amountToPay;
-        this.alreadyPaid = alreadyPaid;
+        this.alreadyPaid = 0.00;
     }
 
     public String getFirstName() {
@@ -85,4 +85,17 @@ public class Student {
         this.alreadyPaid = alreadyPaid;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", personalIdentity=" + personalIdentity +
+                ", yearOfStudy=" + yearOfStudy +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", amountToPay=" + amountToPay +
+                ", alreadyPaid=" + alreadyPaid +
+                '}';
+    }
 }
